@@ -21,11 +21,15 @@
         "source": "http://github.com/digitalcreations/cache-phpredis"
     },
     "require": {
-        "dc/cache": ">=0.2",
+        "dc/cache": "dev-master",
         "ext-redis": "*"
     },
+    "suggests": {
+        "dc/ioc": "dev-master"
+    },
     "require-dev": {
-        "phpunit/phpunit": "4.*"
+        "phpunit/phpunit": "4.*",
+        "dc/ioc": "dev-master"
     },
     "autoload": {
         "psr-4": {
