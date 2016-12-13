@@ -7,22 +7,25 @@ namespace DC\Cache\Implementations\Redis;
  */
 class Module extends \DC\IoC\Modules\Module
 {
-    private $connectionOrHost;
     /**
-     * @var int
+     * @var Cache
      */
-    private $port;
+    private $cache;
 
     public function __construct($connectionOrHost, $port = 6379)
     {
         parent::__construct("dc/cache", []);
-        $this->connectionOrHost = $connectionOrHost;
-        $this->port = $port;
+        $this->cache = new Cache($connectionOrHost, $port);
+    }
+
+    /**
+     * @return \DC\Cache\ICache
+     */
+    function getInstance() {
+        return $this->cache;
     }
 
     function register(\DC\IoC\Container $container) {
-        $container->register(function() {
-            return new Cache($this->connectionOrHost, $this->port);
-        })->to('\DC\Cache\ICache')->withContainerLifetime();
+        $container->register($this->cache)->to('\DC\Cache\ICache')->withContainerLifetime();
     }
 }
