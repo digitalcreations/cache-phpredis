@@ -13,6 +13,6 @@ class Module extends \DC\IoC\Modules\Module
     }
 
     function register(\DC\IoC\Container $container) {
-        $container->register('\DC\Cache\InMemoryCache')->to('\DC\Cache\ICache')->withContainerLifetime();
+        $container->register('\DC\Cache\Implementations\Redis\Cache')->to('\DC\Cache\ICache')->withContainerLifetime();
     }
 }

@@ -65,12 +65,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/digitalcreations/ioc.git",
-                "reference": "eb71c2d7737d3c3ce381bea11a495ceb9f74f226"
+                "reference": "36c23ae5302564b895333cdb476236e1cf548621"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/digitalcreations/ioc/zipball/eb71c2d7737d3c3ce381bea11a495ceb9f74f226",
-                "reference": "eb71c2d7737d3c3ce381bea11a495ceb9f74f226",
+                "url": "https://api.github.com/repos/digitalcreations/ioc/zipball/36c23ae5302564b895333cdb476236e1cf548621",
+                "reference": "36c23ae5302564b895333cdb476236e1cf548621",
                 "shasum": ""
             },
             "require": {
@@ -111,7 +111,7 @@
                 "inversion of control",
                 "ioc"
             ],
-            "time": "2016-12-08T10:13:46+00:00"
+            "time": "2016-12-08T13:18:35+00:00"
         },
         {
             "name": "doctrine/instantiator",
