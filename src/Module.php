@@ -26,6 +26,12 @@ class Module extends \DC\IoC\Modules\Module
     }
 
     function register(\DC\IoC\Container $container) {
-        $container->register($this->cache)->to('\DC\Cache\ICache')->withContainerLifetime();
+        $container->register($this->cache)->to('\DC\Cache\ICache');
+    }
+
+    function createContainer() {
+        $container = new \DC\IoC\Container($this->getInstance());
+        $container->registerModules([$this]);
+        return $container;
     }
 }
